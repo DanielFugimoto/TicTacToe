@@ -1,0 +1,77 @@
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #a0eaf0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#scoreboard {
+    margin-bottom: 20px;
+    display: flex;
+    /* Isso faz com que os elementos dentro de #botoes sejam dispostos em linha */
+    justify-content: space-between;
+    /* Isso espaça os elementos igualmente */
+}
+
+.player {
+    margin: 10px;
+}
+
+#botoes {
+    display: flex;
+    /* Isso faz com que os elementos dentro de #botoes sejam dispostos em linha */
+    justify-content: space-between;
+    /* Isso espaça os elementos igualmente */
+}
+
+#botoes button {
+    flex-grow: 1;
+    /* Isso faz com que os botões cresçam igualmente para ocupar o espaço disponível */
+    margin: 5px;
+    /* Isso adiciona uma pequena margem entre os botões */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: #00ff22;
+    /* A regal purple for player X */
+}
+
+.cell.o::before {
+    content: 'O';
+    color: #ff0000;
+    /* A golden hue for player O */
+}
