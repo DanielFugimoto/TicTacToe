@@ -43,12 +43,12 @@ function handleClick(e) {
 function endGame(draw) {
     if (draw) {
         setTimeout(() => {
-            alert("Draw!");
+            alert("Empate!");
             startGame();
         }, 100); // Pause for a moment of 500 milliseconds
     } else {
         setTimeout(() => {
-            alert(`${xTurn ? "Player X" : "Player O"} Wins!`);
+            alert(`${xTurn ? "Jogador X" : "Jogador O"} Venceu!`);
             if (xTurn) playerXScore++; else playerOScore++;
             updateScores();
             startGame();
